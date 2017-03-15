@@ -1,0 +1,23 @@
+{
+  "name": "blkassembler",
+  "authors": [
+    "Satyanath Shankaran <satyanath@yahoo.com>"
+  ],
+  "description": "A tool to arrange different blocks into different target elements",
+  "main": "blkassembler.js",
+  "keywords": [
+    "grid",
+    "blocks",
+    "layout",
+    "assemble"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
