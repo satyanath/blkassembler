@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blocks Assembler</title>
+    <style>
+        .lytboxes {
+            width: 100px;
+            min-width: 100px;
+            min-height: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            margin: 15px;
+            padding: 15px;
+        }
+    </style>
+    <script src="blkassembler.js"></script>
+</head>
+
+<body>
+    <button onclick="assemblelayout1();"> Layout 1 </button>
+    <button onclick="assemblelayout2();"> Layout 2 </button>
+    <div style="display:flex;flex-direction:row;flex-wrap:wrap;width:100%;height:500px;">
+        <div id="ld1" class="lytboxes"></div>
+        <div id="ld2" class="lytboxes"></div>
+        <div id="ld3" class="lytboxes"></div>
+        <div id="ld4" class="lytboxes"></div>
+        <div id="ld5" class="lytboxes"></div>
+        <div id="ld6" class="lytboxes"></div>
+        <div id="ld7" class="lytboxes"></div>
+        <div id="ld8" class="lytboxes"></div>
+        <div id="ld9" class="lytboxes"></div>
+        <div id="ld10" class="lytboxes"></div>
+    </div>
+
+
+    <div id="ct1">1</div>
+    <div id="ct2">2</div>
+    <div id="ct3">3</div>
+    <div id="ct4">4</div>
+    <div id="ct5">5</div>
+
+
+    <script id="blk1" type="text/assembler">
+        [ {"#ct1":"#ld1"}, {"#ct2":"#ld3"}, {"#ct3":"#ld5"}, {"#ct4":"#ld7"}, {"#ct5":"#ld9"} ]
+    </script>
+    <script id="blk2" type="text/assembler">
+        [ {"#ct1":"#ld2"}, {"#ct2":"#ld4"}, {"#ct3":"#ld6"}, {"#ct4":"#ld8"}, {"#ct5":"#ld10"} ]
+    </script>
+    <script>
+                     function assemblelayout1() {
+                         BASSY.assemble();
+
+                     }
+                     function assemblelayout2() {
+                         BASSY.assemble(document, "#blk2");
+
+                     }
+    </script>
+</body>
+
+</html>
